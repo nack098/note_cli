@@ -14,6 +14,7 @@ Usage:
     create      Create new note
     read        Read note
     delete      Delete note
+    help        Show this text
         "
     );
 }
