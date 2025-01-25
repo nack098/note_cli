@@ -9,22 +9,50 @@ Note CLI is a small program intended for taking note in command line.
 
 ## Commands
 
-1. Help
+- Help
 
 ```shell
-note_cli help
+~/note_cli help
+
 Note CLI - Take a short note in command line.
 Usage:
     list        List of notes
     create      Create new note
     read        Read note
     delete      Delete note
+    help        Show this text
 ```
 
-2. List
+- Create
 
 ```shell
-note_cli list
+~/note_cli create
+
+Title: test
+Content:
+wow
+```
+
+- List
+
+```shell
+~/note_cli list
+
 List of notes:
 1: test
+```
+
+- Read
+
+```shell
+~/note_cli read <index>
+
+test's contents:
+wow
+```
+
+- Delete
+
+```shell
+~/note_cli delete <index>
 ```
