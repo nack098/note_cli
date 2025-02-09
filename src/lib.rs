@@ -42,7 +42,11 @@ use:
 }
 
 pub fn run(args: Vec<String>, path: std::path::PathBuf) -> Result<(), std::io::Error> {
-    let op = Op::from_string(args[0].as_str());
+    let op = if !args.is_empty() {
+        Op::from_string(args[0].as_str())
+    } else {
+        Op::from_string("help")
+    };
 
     match std::fs::create_dir_all(&path) {
         Ok(_) => (),
